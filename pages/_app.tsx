@@ -111,9 +111,9 @@ export default function App({ Component, pageProps }: AppProps) {
           <Content>
             <Component {...pageProps} />
           </Content>
-          {/* <FooterEl>
+          <FooterEl>
             By <a href={AuthorLink}>{Author}</a>
-          </FooterEl> */}
+          </FooterEl>
         </AppEl>
       </Provider>
     </>
