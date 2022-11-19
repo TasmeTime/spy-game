@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         />
         <title>SPY GAME</title>
       </Head>
-      <HomePage />;
+      <HomePage />
     </>
   );
 };
