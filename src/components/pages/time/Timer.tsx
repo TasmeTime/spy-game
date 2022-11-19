@@ -32,11 +32,7 @@ export default function TimerPage() {
 
   const endBtnClicked = () => {
     dispatch(spiesRevealed());
-    router.push("/end");
-  };
-
-  const getCT = () => {
-    return currTimer;
+    // router.push("/end");
   };
 
   useEffect(() => {
@@ -65,9 +61,7 @@ export default function TimerPage() {
 
     if (!intervalRef.current && router.pathname === "/timer")
       intervalRef.current = setInterval(() => {
-        let ct = getCT();
-        console.log("timer", ct, game.time, ct < game.time);
-        if (ct < game.time) {
+        if (currTimer < game.time) {
           setCurrTimer((t) => {
             return t + 1000;
           });
